@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120">
+  <defs>
+    <style>
+      .kgoc-blue { fill: #004B8D; }
+      .kgoc-white { fill: #FFFFFF; }
+      .kgoc-text { fill: #004B8D; font-family: Arial, Helvetica, sans-serif; font-weight: bold; }
+    </style>
+  </defs>
+  
+  <!-- Logo Icon: Blue Circle with Stylized "Sail" -->
+  <circle cx="60" cy="60" r="50" class="kgoc-blue"/>
+  
+  <!-- Stylized Sail/Drop (Abstract representation) -->
+  <path class="kgoc-white" d="M60 20 C 70 20, 90 40, 90 60 C 90 85, 75 95, 60 95 C 45 95, 30 85, 30 60 C 30 40, 50 20, 60 20 Z M 60 40 C 55 40, 45 50, 45 60 C 45 70, 55 75, 60 75 C 65 75, 75 70, 75 60 C 75 50, 65 40, 60 40 Z"/>
+  
+  <!-- Text -->
+  <text x="130" y="55" font-size="28" class="kgoc-text">KGOC</text>
+  <text x="130" y="85" font-size="16" class="kgoc-text">Kuwait Gulf Oil Company</text>
+</svg>

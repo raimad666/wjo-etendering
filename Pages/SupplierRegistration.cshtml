@@ -1,0 +1,351 @@
+@page
+@model WafraJointOperations.Pages.SupplierRegistrationPageModel
+@{
+    ViewData["Title"] = "Supplier Registration - Wafra Joint Operations";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register as a supplier for Wafra Joint Operations. Complete our registration process and become a trusted partner.">
+    <title>@ViewData["Title"]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/supplier-registration.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Supplier Registration</h1>
+                <p class="hero-subtitle">Join Wafra Joint Operations as a Trusted Supplier Partner</p>
+                <p class="hero-description">We're committed to building strong partnerships with qualified suppliers. Complete the registration process below to become part of our supplier network.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success/Error Messages -->
+    @if (!string.IsNullOrEmpty(Model.SuccessMessage))
+    {
+        <div class="container">
+            <div class="alert alert-success">
+                <svg class="alert-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>@Model.SuccessMessage</span>
+            </div>
+        </div>
+    }
+
+    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        <div class="container">
+            <div class="alert alert-error">
+                <svg class="alert-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>@Model.ErrorMessage</span>
+            </div>
+        </div>
+    }
+
+    <!-- Registration Steps Guide -->
+    <section class="steps-section">
+        <div class="container">
+            <h2 class="section-title">Registration Process</h2>
+            <p class="section-subtitle">Follow these simple steps to complete your supplier registration</p>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Complete Registration Form</h3>
+                    <p class="step-description">Fill out the comprehensive registration form below with your company details and business information.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Submit Documentation</h3>
+                    <p class="step-description">Prepare and submit required documents including business registration, insurance, and certifications.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Review & Verification</h3>
+                    <p class="step-description">Our procurement team will review your application and verify all submitted information within 3-5 business days.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Approval & Onboarding</h3>
+                    <p class="step-description">Once approved, you'll receive portal access and be contacted for the onboarding process.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="form-section" id="registration-form">
+        <div class="container">
+            <div class="form-header">
+                <h2 class="section-title">Supplier Registration Form</h2>
+                <p class="section-subtitle">Please provide accurate information about your company</p>
+            </div>
+
+            <form method="post" asp-page-handler="Register" class="registration-form">
+                <div class="form-card">
+                    <h3 class="form-section-title">Company Information</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label asp-for="Registration.CompanyName" class="form-label">Company Name *</label>
+                            <input asp-for="Registration.CompanyName" class="form-input" placeholder="Enter your company name" />
+                            <span asp-validation-for="Registration.CompanyName" class="form-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label asp-for="Registration.RegistrationNumber" class="form-label">Registration Number *</label>
+                            <input asp-for="Registration.RegistrationNumber" class="form-input" placeholder="Business registration number" />
+                            <span asp-validation-for="Registration.RegistrationNumber" class="form-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label asp-for="Registration.Country" class="form-label">Country *</label>
+                            <input asp-for="Registration.Country" class="form-input" placeholder="Country of registration" />
+                            <span asp-validation-for="Registration.Country" class="form-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label asp-for="Registration.BusinessCategory" class="form-label">Business Category *</label>
+                            <select asp-for="Registration.BusinessCategory" class="form-input">
+                                <option value="">Select a category</option>
+                                <option value="Construction & Engineering">Construction & Engineering</option>
+                                <option value="Oil & Gas Services">Oil & Gas Services</option>
+                                <option value="IT & Technology">IT & Technology</option>
+                                <option value="Logistics & Transportation">Logistics & Transportation</option>
+                                <option value="Catering & Hospitality">Catering & Hospitality</option>
+                                <option value="Safety Equipment">Safety Equipment</option>
+                                <option value="Office Supplies">Office Supplies</option>
+                                <option value="Consulting Services">Consulting Services</option>
+                                <option value="Maintenance & Repair">Maintenance & Repair</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <span asp-validation-for="Registration.BusinessCategory" class="form-error"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-card">
+                    <h3 class="form-section-title">Contact Information</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label asp-for="Registration.Email" class="form-label">Email Address *</label>
+                            <input asp-for="Registration.Email" type="email" class="form-input" placeholder="company@example.com" />
+                            <span asp-validation-for="Registration.Email" class="form-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label asp-for="Registration.Phone" class="form-label">Phone Number *</label>
+                            <input asp-for="Registration.Phone" type="tel" class="form-input" placeholder="+XXX-XXXX-XXXX" />
+                            <span asp-validation-for="Registration.Phone" class="form-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Registration.Address" class="form-label">Street Address *</label>
+                        <input asp-for="Registration.Address" class="form-input" placeholder="Full street address" />
+                        <span asp-validation-for="Registration.Address" class="form-error"></span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label asp-for="Registration.City" class="form-label">City</label>
+                            <input asp-for="Registration.City" class="form-input" placeholder="City" />
+                            <span asp-validation-for="Registration.City" class="form-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label asp-for="Registration.PostalCode" class="form-label">Postal Code</label>
+                            <input asp-for="Registration.PostalCode" class="form-input" placeholder="Postal/ZIP code" />
+                            <span asp-validation-for="Registration.PostalCode" class="form-error"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-card">
+                    <h3 class="form-section-title">Business Details</h3>
+                    
+                    <div class="form-group">
+                        <label asp-for="Registration.ServicesOffered" class="form-label">Services/Products Offered *</label>
+                        <textarea asp-for="Registration.ServicesOffered" class="form-textarea" rows="4" placeholder="Describe the services or products your company offers..."></textarea>
+                        <span asp-validation-for="Registration.ServicesOffered" class="form-error"></span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label asp-for="Registration.Website" class="form-label">Website</label>
+                            <input asp-for="Registration.Website" type="url" class="form-input" placeholder="https://www.example.com" />
+                            <span asp-validation-for="Registration.Website" class="form-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label asp-for="Registration.NumberOfEmployees" class="form-label">Number of Employees</label>
+                            <input asp-for="Registration.NumberOfEmployees" type="number" class="form-input" placeholder="e.g., 50" />
+                            <span asp-validation-for="Registration.NumberOfEmployees" class="form-error"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-card">
+                    <h3 class="form-section-title">Terms & Conditions</h3>
+                    
+                    <div class="form-checkbox-group">
+                        <label class="checkbox-label">
+                            <input asp-for="Registration.AcceptTerms" type="checkbox" class="form-checkbox" />
+                            <span class="checkbox-text">I confirm that all information provided is accurate and I accept the <a href="#" class="link">terms and conditions</a> for supplier registration *</span>
+                        </label>
+                        <span asp-validation-for="Registration.AcceptTerms" class="form-error"></span>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">
+                        <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Submit Registration
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Inquiry Form -->
+    <section class="form-section inquiry-section" id="inquiry-form">
+        <div class="container">
+            <div class="form-header">
+                <h2 class="section-title">Have Questions?</h2>
+                <p class="section-subtitle">Send us your inquiry and we'll get back to you within 24-48 hours</p>
+            </div>
+
+            <form method="post" asp-page-handler="Inquiry" class="inquiry-form">
+                <div class="form-card">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label asp-for="Inquiry.Name" class="form-label">Your Name *</label>
+                            <input asp-for="Inquiry.Name" class="form-input" placeholder="Full name" />
+                            <span asp-validation-for="Inquiry.Name" class="form-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label asp-for="Inquiry.Email" class="form-label">Email Address *</label>
+                            <input asp-for="Inquiry.Email" type="email" class="form-input" placeholder="your@email.com" />
+                            <span asp-validation-for="Inquiry.Email" class="form-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label asp-for="Inquiry.Phone" class="form-label">Phone Number</label>
+                            <input asp-for="Inquiry.Phone" type="tel" class="form-input" placeholder="+XXX-XXXX-XXXX" />
+                            <span asp-validation-for="Inquiry.Phone" class="form-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label asp-for="Inquiry.CompanyName" class="form-label">Company Name</label>
+                            <input asp-for="Inquiry.CompanyName" class="form-input" placeholder="Your company" />
+                            <span asp-validation-for="Inquiry.CompanyName" class="form-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Inquiry.Subject" class="form-label">Subject *</label>
+                        <input asp-for="Inquiry.Subject" class="form-input" placeholder="Brief subject of your inquiry" />
+                        <span asp-validation-for="Inquiry.Subject" class="form-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Inquiry.Message" class="form-label">Message *</label>
+                        <textarea asp-for="Inquiry.Message" class="form-textarea" rows="5" placeholder="Please provide details about your inquiry..."></textarea>
+                        <span asp-validation-for="Inquiry.Message" class="form-error"></span>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-secondary">
+                        <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        Send Inquiry
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="faq-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Find answers to common questions about supplier registration</p>
+            </div>
+
+            <div class="faq-container">
+                @for (int i = 0; i < Model.FAQs.Count; i++)
+                {
+                    <div class="faq-item">
+                        <button type="button" class="faq-question" onclick="toggleFAQ(this)">
+                            <span class="faq-question-text">@Model.FAQs[i].Question</span>
+                            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>@Model.FAQs[i].Answer</p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-card">
+                <h2 class="contact-title">Need Additional Support?</h2>
+                <p class="contact-description">Our procurement team is here to help you through the registration process</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        <span>jopsuppliersmanagers@chevron.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        <span>+965-23983639</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Sunday - Thursday, 7:00 AM - 3:00 PM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="~/js/supplier-registration.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/mvc/5.2.7/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>
