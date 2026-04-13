@@ -113,9 +113,9 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-    color: white;
-    padding: var(--spacing-2xl) 0;
+    background: white;
+    color: var(--gray-900);
+    padding: 1.2rem 0 0.5rem;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -139,20 +139,20 @@ body {
 }
 
 .hero-subtitle-orgs {
-    font-size: 0.82rem;
+    font-size: 1.1rem;
     font-weight: 600;
     letter-spacing: 0.07em;
-    color: rgba(255,255,255,0.88);
-    margin: 0.2rem 0 0;
+    color: var(--gray-600);
+    margin: 0.3rem 0 0;
     white-space: nowrap;
 }
 
 .hero-etendering {
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1.6rem;
+    font-weight: 700;
     letter-spacing: 0.04em;
-    color: rgba(255,255,255,0.95);
-    margin: 0.5rem 0 0;
+    color: var(--gray-900);
+    margin: 0.6rem 0 0;
 }
 
 .hero-logos {
@@ -184,10 +184,11 @@ body {
 }
 
 .hero-title {
-    font-size: 2.4rem;
+    font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 0;
     letter-spacing: 0.06em;
+    color: var(--gray-900);
 }
 
 .hero-content {
@@ -260,8 +261,8 @@ body {
 
 /* Steps Section */
 .steps-section {
-    padding: var(--spacing-2xl) 0;
-    background-color: white;
+    padding: 1rem 0 var(--spacing-2xl);
+    background: white;
 }
 
 .section-title {
@@ -687,20 +688,48 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2rem;
+    .hero-header-row {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
     }
 
-    .hero-subtitle {
-        font-size: 1.25rem;
+    .hero-logo-img {
+        height: 52px;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+        letter-spacing: 0.02em;
+    }
+
+    .hero-subtitle-orgs {
+        font-size: 0.72rem;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .hero-etendering {
+        font-size: 1.2rem;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .steps-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .steps-grid .step-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .or-divider {
+        margin: 0;
     }
 
     .form-row {
@@ -718,8 +747,24 @@ body {
 }
 
 @media (max-width: 480px) {
+    .hero-header-row {
+        padding: 0.75rem;
+    }
+
+    .hero-logo-img {
+        height: 44px;
+    }
+
     .hero-title {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle-orgs {
+        font-size: 0.65rem;
+    }
+
+    .hero-etendering {
+        font-size: 1rem;
     }
 
     .btn {
