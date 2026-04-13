@@ -23,16 +23,18 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-header-row">
-                    <h1 class="hero-title">Supplier Registration</h1>
-                    <div class="hero-logos">
-                        <img src="wwwroot/images/kgoc-logo.svg" alt="Kuwait Gulf Oil Company" class="hero-logo-img">
-                        <img src="wwwroot/images/chevron-logo.svg" alt="Saudi Arabian Chevron" class="hero-logo-img">
+                    <div class="hero-logo-wrap hero-logo-chevron">
+                        <img src="wwwroot/images/chevron-logo.png" alt="Saudi Arabian Chevron Inc." class="hero-logo-img">
+                    </div>
+                    <div class="hero-title-block">
+                        <h1 class="hero-title">JOINT OPERATIONS</h1>
+                        <p class="hero-subtitle-orgs">SAUDI ARABIAN CHEVRON INC. &nbsp;&ndash;&nbsp; KUWAIT GULF OIL COMPANY (K.S.C.)</p>
+                        <p class="hero-etendering">WJO E-Tendering</p>
+                    </div>
+                    <div class="hero-logo-wrap">
+                        <img src="wwwroot/images/kgoc-logo.png" alt="Kuwait Gulf Oil Company" class="hero-logo-img">
                     </div>
                 </div>
-
-                <p class="hero-description">To participate in Wafra Joint Operations as a supplier, you must be
-                    registered with either the Kuwait Petroleum Corporation (KPC) CPQ in the State of Kuwait or with
-                    Saudi Arabian Chevron Inc. (SAC).</p>
             </div>
         </div>
     </section>
@@ -40,23 +42,27 @@
     <!-- Registration Prerequisite Notice -->
     <section class="steps-section">
         <div class="container">
-            <h2 class="section-title">Registration Requirements</h2>
-            <p class="section-subtitle">Before doing business with Wafra Joint Operations, please ensure you meet one of
-                the following criteria:</p>
+            <h2 class="section-title">WJO E-Tendering Registration Requirements</h2>
+            <p class="section-subtitle">Before you are able to participate in Tenders, please ensure you meet one of the following criteria:</p>
 
-            <div class="steps-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div class="steps-grid" style="display:flex; align-items:center; justify-content:center; gap:0;">
                 <div class="step-card">
-                    <div class="step-number" style="background: var(--primary-color);">KPC</div>
+                    <div class="step-number" style="background: none; padding: 4px; display: flex; align-items: center; justify-content: center;">
+                        <img src="wwwroot/images/KPC.png" alt="Kuwait Petroleum Corporation" style="height: 48px; width: auto;">
+                    </div>
                     <h3 class="step-title">Kuwait Petroleum Corporation</h3>
                     <p class="step-description">Suppliers must be registered in the Commercial Pre-Qualification (CPQ)
                         system of the Kuwait Petroleum Corporation in the State of Kuwait.</p>
                 </div>
 
+                <div class="or-divider">OR</div>
+
                 <div class="step-card">
-                    <div class="step-number" style="background: var(--secondary-color);">SAC</div>
+                    <div class="step-number" style="background: none; padding: 4px; display: flex; align-items: center; justify-content: center;">
+                        <img src="wwwroot/images/chevron-logo.png" alt="Chevron" style="height: 48px; width: auto;">
+                    </div>
                     <h3 class="step-title">Saudi Arabian Chevron Inc.</h3>
-                    <p class="step-description">Alternatively, suppliers must be registered with Saudi Arabian Chevron
-                        Inc. to be eligible for participation.</p>
+                    <p class="step-description">Suppliers must be registered with Saudi Arabian Chevron Inc. to be eligible for participation.</p>
                 </div>
             </div>
         </div>
@@ -150,33 +156,27 @@
             <div class="faq-container">
                 <div class="faq-item">
                     <button type="button" class="faq-question" onclick="toggleFAQ(this)">
-                        <span class="faq-question-text">What are the requirements to become a supplier for Wafra Joint
-                            Operations?</span>
+                        <span class="faq-question-text">What are the requirements to become a supplier for Wafra E-Tendering?</span>
                         <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
                             </path>
                         </svg>
                     </button>
                     <div class="faq-answer">
-                        <p>To become a supplier, you must have a valid business registration, provide proof of
-                            insurance, meet our quality standards, and comply with all applicable regulations. You'll
-                            need to complete the registration form above and submit required documentation for review.
-                        </p>
+                        <p>To become E-Tendering supplier, you must have a valid business registration, provide proof of insurance, meet our quality standards, and comply with all applicable regulations.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button type="button" class="faq-question" onclick="toggleFAQ(this)">
-                        <span class="faq-question-text">How long does the registration process take?</span>
+                        <span class="faq-question-text">How Long does the E-Tendering registration process take?</span>
                         <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
                             </path>
                         </svg>
                     </button>
                     <div class="faq-answer">
-                        <p>The initial review of your registration typically takes 3-5 business days. Once approved,
-                            you'll be contacted by our procurement team to complete the onboarding process, which may
-                            take an additional 1-2 weeks depending on your business category.</p>
+                        <p>The initial review of your E-Tendering registration typically takes 3-5 business days. Once approved, you'll be contacted by our procurement team to complete the onboarding process, which may take an additional 1-2 weeks depending on your business category.</p>
                     </div>
                 </div>
 
@@ -205,11 +205,8 @@
                         </svg>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes, we welcome international suppliers. However, you must be able to operate legally in our
-                            jurisdiction and meet all local regulatory requirements. Additional documentation may be
-                            required for international companies.</p>
-                        <p>No, there is no registration fee. The supplier registration process is completely free of
-                            charge.</p>
+                        <p>Yes, international suppliers are welcome. However, they must be able to operate legally within our jurisdiction and comply with all applicable local regulations. Additional documentation may be requested for companies based outside the country.</p>
+                        <p>There is no registration fee for the Wafra E-Tendering system; the supplier registration process is entirely free of charge. However, registration with Kuwait Petroleum Company or Saudi Arabian Chevron Inc. may involve applicable fees.</p>
                     </div>
                 </div>
 

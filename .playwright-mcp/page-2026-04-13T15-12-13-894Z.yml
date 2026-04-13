@@ -1,0 +1,113 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - strong [ref=e3]: ⚠️ DEMO MODE
+    - text: "- This is a preview. Forms will not submit data. Integrate with .NET for full functionality."
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - img "Saudi Arabian Chevron Inc." [ref=e9]
+      - generic [ref=e10]:
+        - heading "JOINT OPERATIONS" [level=1] [ref=e11]
+        - paragraph [ref=e12]: SAUDI ARABIAN CHEVRON INC. – KUWAIT GULF OIL COMPANY (K.S.C.)
+      - img "Kuwait Gulf Oil Company" [ref=e14]
+    - paragraph [ref=e15]: To participate in Wafra Joint Operations as a supplier, you must be registered with either the Kuwait Petroleum Corporation (KPC) CPQ in the State of Kuwait or with Saudi Arabian Chevron Inc. (SAC).
+  - generic [ref=e17]:
+    - heading "Registration Requirements" [level=2] [ref=e18]
+    - paragraph [ref=e19]: "Before doing business with Wafra Joint Operations, please ensure you meet one of the following criteria:"
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e22]: KPC
+        - heading "Kuwait Petroleum Corporation" [level=3] [ref=e23]
+        - paragraph [ref=e24]: Suppliers must be registered in the Commercial Pre-Qualification (CPQ) system of the Kuwait Petroleum Corporation in the State of Kuwait.
+      - generic [ref=e25]:
+        - generic [ref=e26]: SAC
+        - heading "Saudi Arabian Chevron Inc." [level=3] [ref=e27]
+        - paragraph [ref=e28]: Alternatively, suppliers must be registered with Saudi Arabian Chevron Inc. to be eligible for participation.
+  - generic [ref=e30]:
+    - generic [ref=e31]:
+      - heading "Supplier Inquiries" [level=2] [ref=e32]
+      - paragraph [ref=e33]: If you have questions about the registration requirements or need further assistance, please contact us.
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - generic [ref=e38]:
+              - text: Your Name
+              - generic [ref=e39]: "*"
+            - textbox "Your Name *" [ref=e40]:
+              - /placeholder: Full name
+          - generic [ref=e41]:
+            - generic [ref=e42]:
+              - text: Email Address
+              - generic [ref=e43]: "*"
+            - textbox "Email Address *" [ref=e44]:
+              - /placeholder: your@email.com
+        - generic [ref=e45]:
+          - generic [ref=e46]:
+            - generic [ref=e47]: Phone Number
+            - textbox "Phone Number" [ref=e48]:
+              - /placeholder: +XXX-XXXX-XXXX
+          - generic [ref=e49]:
+            - generic [ref=e50]: Company Name
+            - textbox "Company Name" [ref=e51]:
+              - /placeholder: Your company
+        - generic [ref=e52]:
+          - generic [ref=e53]:
+            - text: Subject
+            - generic [ref=e54]: "*"
+          - textbox "Subject *" [ref=e55]:
+            - /placeholder: Brief subject of your inquiry
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - text: Message
+            - generic [ref=e58]: "*"
+          - textbox "Message *" [ref=e59]:
+            - /placeholder: Please provide details about your inquiry...
+          - generic [ref=e60]: 0 / 2000 characters
+      - button "Send Inquiry" [ref=e62] [cursor=pointer]:
+        - img [ref=e63]
+        - text: Send Inquiry
+  - generic [ref=e65]:
+    - generic [ref=e66]:
+      - heading "Frequently Asked Questions" [level=2] [ref=e67]
+      - paragraph [ref=e68]: Find answers to common questions about supplier registration
+    - generic [ref=e69]:
+      - generic [ref=e70]:
+        - button "What are the requirements to become a supplier for Wafra Joint Operations?" [ref=e71] [cursor=pointer]:
+          - generic [ref=e72]: What are the requirements to become a supplier for Wafra Joint Operations?
+          - img [ref=e73]
+        - paragraph [ref=e74]: To become a supplier, you must have a valid business registration, provide proof of insurance, meet our quality standards, and comply with all applicable regulations. You'll need to complete the registration form above and submit required documentation for review.
+      - generic [ref=e75]:
+        - button "How long does the registration process take?" [ref=e76] [cursor=pointer]:
+          - generic [ref=e77]: How long does the registration process take?
+          - img [ref=e78]
+        - paragraph [ref=e79]: The initial review of your registration typically takes 3-5 business days. Once approved, you'll be contacted by our procurement team to complete the onboarding process, which may take an additional 1-2 weeks depending on your business category.
+      - generic [ref=e80]:
+        - button "What documents do I need to provide?" [ref=e81] [cursor=pointer]:
+          - generic [ref=e82]: What documents do I need to provide?
+          - img [ref=e83]
+        - paragraph [ref=e84]: "Required documents include: Business registration certificate, Tax registration, Insurance certificates (liability and workers' compensation), Company profile, Financial statements (last 2 years), Quality certifications (if applicable), and References from previous clients."
+      - generic [ref=e85]:
+        - button "Can international companies register as suppliers?" [ref=e86] [cursor=pointer]:
+          - generic [ref=e87]: Can international companies register as suppliers?
+          - img [ref=e88]
+        - generic:
+          - paragraph [ref=e89]: Yes, we welcome international suppliers. However, you must be able to operate legally in our jurisdiction and meet all local regulatory requirements. Additional documentation may be required for international companies.
+          - paragraph [ref=e90]: No, there is no registration fee. The supplier registration process is completely free of charge.
+      - generic [ref=e91]:
+        - button "Who can I contact if I have additional questions?" [ref=e92] [cursor=pointer]:
+          - generic [ref=e93]: Who can I contact if I have additional questions?
+          - img [ref=e94]
+        - paragraph [ref=e95]: You can submit your questions using the inquiry form on this page, or contact our procurement team directly at jopsuppliermanagers@chevron.com or call +965-23983639 during business hours (Sunday-Thursday, 7:00 AM - 3:00 PM).
+  - generic [ref=e98]:
+    - heading "Need Additional Support?" [level=2] [ref=e99]
+    - paragraph [ref=e100]: Our procurement team is here to help you through the registration process
+    - generic [ref=e101]:
+      - generic [ref=e102]:
+        - img [ref=e103]
+        - generic [ref=e104]: jopsuppliermanagers@chevron.com
+      - generic [ref=e105]:
+        - img [ref=e106]
+        - generic [ref=e107]: +965-23983639
+      - generic [ref=e108]:
+        - img [ref=e109]
+        - generic [ref=e111]: Sunday - Thursday, 7:00 AM - 3:00 PM
