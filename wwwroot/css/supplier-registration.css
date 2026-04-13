@@ -686,90 +686,62 @@ body {
     color: var(--primary-light);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero-header-row {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
+/* Responsive Design — preserve desktop layout, scale fonts only */
+@media (max-width: 900px) {
+    .hero-title {
+        font-size: 2.6rem;
     }
-
-    .hero-logo-img {
-        height: 52px;
+    .hero-subtitle-orgs {
+        font-size: 0.9rem;
     }
+    .hero-etendering {
+        font-size: 1.3rem;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .steps-grid .step-card {
+        min-width: 220px;
+    }
+}
 
+@media (max-width: 600px) {
     .hero-title {
         font-size: 1.8rem;
         letter-spacing: 0.02em;
     }
-
-    .hero-subtitle-orgs {
-        font-size: 0.72rem;
-        white-space: normal;
-        text-align: center;
-    }
-
-    .hero-etendering {
-        font-size: 1.2rem;
-    }
-
-    .section-title {
-        font-size: 1.5rem;
-    }
-
-    .steps-grid {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .steps-grid .step-card {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .or-divider {
-        margin: 0;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-
-    .form-card {
-        padding: var(--spacing-md);
-    }
-
-    .contact-info {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-header-row {
-        padding: 0.75rem;
-    }
-
-    .hero-logo-img {
-        height: 44px;
-    }
-
-    .hero-title {
-        font-size: 1.5rem;
-    }
-
     .hero-subtitle-orgs {
         font-size: 0.65rem;
+        white-space: normal;
     }
-
     .hero-etendering {
         font-size: 1rem;
     }
-
-    .btn {
-        width: 100%;
-        justify-content: center;
+    .hero-logo-img {
+        height: 52px;
+    }
+    .section-title {
+        font-size: 1.4rem;
+    }
+    .steps-grid .step-card {
+        min-width: 160px;
+        padding: 1rem;
+    }
+    .or-divider {
+        width: 40px;
+        height: 40px;
+        font-size: 0.8rem;
+        margin: 0 0.5rem;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    .form-card {
+        padding: var(--spacing-md);
+    }
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
